@@ -1,5 +1,6 @@
 import os
 import sys
+import pickle
 from pathlib import Path
 sys.path.append( str(Path(__file__).parent.parent.parent))
 
@@ -20,7 +21,7 @@ from xgboost import XGBRegressor
 from src.exception import CustomException
 from src.logger import logging
 
-from src.utils import save_object,evaluate_models
+from src.utils import save_object,evaluate_models,load_object
 
 @dataclass
 class ModelTrainerConfig:

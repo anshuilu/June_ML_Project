@@ -1,4 +1,5 @@
 import sys
+import pickle
 from pathlib import Path
 sys.path.append( str(Path(__file__).parent.parent.parent))
 from dataclasses import dataclass
@@ -18,7 +19,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join('artifacts',"proprocessor.pkl")
+    preprocessor_obj_file_path=os.path.join('artifacts',"preprocessor.pkl")
 
 class DataTransformation:
     def __init__(self):
